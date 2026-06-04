@@ -24,7 +24,7 @@ const monoFont = Spline_Sans_Mono({
 });
 
 async function RootLayout({ children }) {
-  const savedTheme = (await cookies()).get("color-theme");
+  const savedTheme = (await cookies()).get(COOKIE_THEME_NAME);
   const theme = savedTheme?.value || "light";
 
   return (
